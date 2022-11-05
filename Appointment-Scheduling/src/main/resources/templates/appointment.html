@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>CitiusTech HealthCare</title>
+</head>
+<body>
+	<div>
+		Hi <b th:text="${email.patientName}"></b>
+	</div>
+
+	<div>
+		Your appointment is scheduled successfully on<b
+			th:text="${email.date}"></b> at <b th:text="${email.time}"></b> with
+		the physician <b th:text="${email.physicianName}"></b>
+	</div>
+
+	<div>
+		<b>Thanks</b>
+	</div>
+	<div>
+		<b>CitiusTechHealthCare</b>
+	</div>
+</body>
+</html>

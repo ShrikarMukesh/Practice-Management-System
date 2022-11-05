@@ -1,0 +1,68 @@
+<div class="container">
+  <p
+    style="background-color: black; color:cyan; font-size: 20px; margin-top: 20px"
+  >
+    Last Visit Details
+  </p>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td>Visit Id:</td>
+            <td>{{ visit.visitid }}</td>
+          </tr>
+          <tr>
+            <td>Visited On</td>
+            <td>{{ visit.visitedAt }}</td>
+          </tr>
+          <tr>
+            <td>Medication</td>
+            <td>
+              <span *ngFor="let medication of visit.medication">
+                {{ "applNo : "+ medication.applNo}}<br />
+                {{"productNo : " + medication.productNo}}<br />
+                {{"form : " + medication.form}}<br />
+                {{"strength : " + medication.strength}}<br />
+                {{"referenceDrug : " + medication.referenceDrug}}<br />
+                {{"drugName : " + medication.drugName}}<br />
+                {{"activeIngredient : " + medication.activeIngredient}}<br />
+                {{"referenceStandard : " + medication.referenceStandard}}<br />
+                <p>=====</p>
+              </span>
+             
+            </td>
+          </tr>
+          <tr>
+            <td>Procedures</td>
+            <td>
+              <span *ngFor="let procedure of visit.procedure">
+                {{ "procedureCode : "+ procedure.procedureCode}}<br />
+                {{"procedureDescription : " + procedure.procedureDescription}}<br />
+                {{"approachType : " + procedure.approachType}}<br />
+                
+                <p>=====</p>
+              </span>
+             
+            </td>
+          </tr>
+          <!--Diagnosis-->
+          <tr>
+            <td>Diagnosis</td>
+            <td>
+              <span *ngFor="let diagnosis of visit.diagnosis">
+                {{ "diagnosisCode : "+ diagnosis.diagnosisCode}}<br />
+                {{"diagnosisDescription : " + diagnosis.diagnosisDescription}}<br />
+                
+                <p>=====</p>
+              </span>
+             
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
